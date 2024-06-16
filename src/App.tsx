@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import BlogCard from './components/BlogCard';
+import img from './assets/spacejoy-YqFz7UMm8qE-unsplash.jpg';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BlogCard 
+        imgSrc={img}
+        header={{
+          badgeText: "Interior",
+          headerText: "Top 5 Living Room Inspirations"
+        }}
+        body={{
+          bodyText: "Curated vibrants colors for your living, make it pop & calm in the same time.",
+          buttonLink: "https://www.example.com"
+        }}/>
     </div>
   );
 }
